@@ -70,6 +70,7 @@ header .contenedor-texto .texto {
 
 header .contenedor-texto .texto:hover {
     border: 2px solid #f2f2f2;
+    opacity: 1;
 }
 
 header .contenedor-texto .texto h1,
@@ -105,7 +106,7 @@ header .contenedor-texto .texto .profesion {
 }
 
 .main .acerca-de .foto {
-    margin-top: -90px;
+    margin-top: -100px;
 }
 
 .main .acerca-de .foto img {
@@ -168,6 +169,15 @@ header .contenedor-texto .texto .profesion {
 .main .trabajos .contenedor-trabajos .trabajo {
     width: 23%;
     margin-bottom: 20px;
+    border: 2px solid #1da1f2;
+    padding: 4px;
+    opacity: .8;
+    transition: all .6s ease-out;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 .main .trabajos .contenedor-trabajos .trabajo .thumb {
@@ -291,4 +301,62 @@ footer .contacto .formulario .boton:active {
     background: #4fb560;
     border: 1px solid #4fb560;
     font-weight: 600;
+}
+
+
+/*---------------FOOTER---------------------------*/
+
+footer .redes-sociales {
+    background: #1e2b38;
+    padding: 60px 0;
+    padding-bottom: 20px;
+    transition: all .6s ease-out;
+}
+
+footer .redes-sociales:hover {
+    background: #23001E;
+}
+
+footer .redes-sociales .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a {
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 30px;
+    margin: 0 20px;
+    transition: all .5s ease-in;
+}
+
+footer .redes-sociales .twitter:hover {
+    background: #1da1f2;
+}
+
+footer .redes-sociales .facebook:hover {
+    background: #3b5998;
+}
+
+footer .redes-sociales .github:hover {
+    background: rgb(7, 7, 7);
+}
+
+footer .redes-sociales .instagram:hover {
+    background: #FF4F12;
+}
+
+footer .redes-sociales .Youtube:hover {
+    background: #ff0000;
+}
+
+footer .contenedor p {
+    color: #f2f2f2;
+    font-size: 20px;
+    line-height: 17px;
+    font-weight: 900;
 }
