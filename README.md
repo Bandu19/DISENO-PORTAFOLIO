@@ -9,7 +9,7 @@
 ##Segunda parte final del proyecto con CSS
 Esta parte es la seccion del ***header***
 ![CSS](https://github.com/Bandu19/DISENO-PORTAFOLIO/blob/main/img/finalizacion.png?raw=true)
-
+#
 
 ##Tercera parte final del proyecto con CSS
 Esta parte es la seccion del **section**
