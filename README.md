@@ -15,4 +15,6 @@ Esta parte es la seccion del ***header***
 Esta parte es la seccion del **section**
 ![CSS_S](https://github.com/Bandu19/DISENO-PORTAFOLIO/blob/main/img/finalizacion2.png?raw=true)
 
-##Cuarta
+##Fin del proyecto con CSS
+Esta es la parte del **footer**
+![CSS_F](https://github.com/Bandu19/DISENO-PORTAFOLIO/blob/main/img/contacto.png?raw=true)
