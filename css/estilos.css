@@ -360,3 +360,12 @@ footer .contenedor p {
     line-height: 17px;
     font-weight: 900;
 }
+
+
+/*-------- -------- MEDIA QUERIES ------ ----------*/
+
+@media screen and (max-width: 800px) {
+    header .menu {
+        text-align: center;
+    }
+}
