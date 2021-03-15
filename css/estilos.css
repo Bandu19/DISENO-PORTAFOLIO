@@ -368,4 +368,59 @@ footer .contenedor p {
     header .menu {
         text-align: center;
     }
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .contenedor-texto .texto .nombre {
+        font-size: 40px;
+    }
+    header .contenedor-texto .texto .profesion {
+        font-size: 18px;
+    }
+    footer .redes-sociales .contenedor {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header .menu {
+        text-align: start;
+    }
+    header .menu a {
+        margin: 0 15px;
+    }
+    header .contenedor-texto .texto .nombre {
+        font-size: 35px;
+    }
+    header .contenedor-texto .texto .profesion {
+        font-size: 18px;
+    }
+    /*----------MAIN---------*/
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 100%;
+    }
+    .main .trabajos .contenedor-trabajos {
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*-----------FOOTER---------*/
+    footer .contacto .formulario {
+        flex-direction: column;
+    }
+    footer .contacto .formulario input[type="text"],
+    footer .contacto .formulario input[type="email"] {
+        width: 100%;
+    }
+    footer .redes-sociales .contenedor {
+        padding: 20px 0;
+    }
+    footer .contenedor p {
+        text-align: start;
+        line-height: 12px;
+        font-size: 16px;
+    }
 }
