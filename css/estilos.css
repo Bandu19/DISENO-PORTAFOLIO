@@ -21,7 +21,8 @@ body {
 /*---------------------HEADER--------------*/
 
 header {
-    background: url(../img/imagen_fondo_2.jpg);
+    background: url(../img/img2.jpg);
+    /*background: url(../img/imagen_fondo_2.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -112,6 +113,7 @@ header .contenedor-texto .texto .profesion {
 .main .acerca-de .foto img {
     vertical-align: top;
     border-radius: 50%;
+    margin-right: 50px;
     border: 5px solid rgba(255, 255, 255, .2);
 }
 
@@ -237,18 +239,16 @@ footer .contacto .formulario {
 }
 
 footer .contacto .formulario input[type="text"],
-footer .contacto .formulario input[type="email"],
 footer .contacto .formulario textarea {
     border: 2px solid #cecece;
     border-radius: 5px;
     padding: 15px 20px;
     font-size: 20px;
-    color: #a4a4a4
+    color: #0a0a0a
 }
 
-footer .contacto .formulario input[type="text"],
-footer .contacto .formulario input[type="email"] {
-    width: 49%;
+footer .contacto .formulario input[type="text"] {
+    width: 100%;
     margin-bottom: 15px;
     transition: all .8s ease;
 }
@@ -283,6 +283,7 @@ footer .contacto .formulario .boton {
     color: #3895ea;
     padding: 10px;
     cursor: pointer;
+    margin-bottom: 20px;
     font-size: 16px;
     border-radius: 3px;
     box-shadow: 0 0 20px #3295ea;
@@ -305,6 +306,15 @@ footer .contacto .formulario .boton:active {
 
 
 /*---------------FOOTER---------------------------*/
+
+footer {
+    background: url(../img/img2.jpg);
+    /*background: url(../img/imagen_fondo_2.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    max-height: 1000px;
+}
 
 footer .redes-sociales {
     background: #1e2b38;
