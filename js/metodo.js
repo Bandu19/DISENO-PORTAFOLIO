@@ -1,206 +1,84 @@
 const Procedimiento = (text, map, map2) => {
     var $resul = new String();
-    var $i, $j, $c, posicion, fila1; //27
+    var $i, $j, $k, $c, posicion, fila1; //27
     let $minus = text.toLowerCase();
 
-
-
+    //holá
     for ($i = 0; $i < $minus.length; $i++) { //hola mundo
         // $c = text.toLowerCase($i);
         $c = $minus.charAt($i); // ESPACIO
         //$minus = text.toLowerCase($c);
         //DEVUELVE UN NUMERO
+
         if ($c === ' ') {
             posicion = map2.indexOf($c); // "  "
             //4
             $j = posicion + posicion - posicion;
-
             fila1 = map2[$j];
             $resul += fila1;
-        } else {
+        } else if ($c == 'a' || $c == 'b' || $c == 'c' || $c == 'd' || $c == 'e' || $c == 'f' || $c == 'g' || $c == 'h' || $c == 'i' || $c == 'j' || $c == 'k' || $c == 'l' || $c == 'm' || $c == 'n' || $c == 'ñ' || $c == 'o' || $c == 'p' || $c == 'q' || $c == 'r' || $c == 's' || $c == 't' || $c == 'u' || $c == 'v' || $c == 'w' || $c == 'x' || $c == 'y' || $c == 'z') {
             posicion = map.indexOf($c);
             $j = posicion + posicion - posicion;
             fila1 = map2[$j];
             console.log(fila1)
             $resul += fila1; //!+
+        } else {
+            $resul = 'Dentro del texto que ingreso hay algo diferente a una letra del abecedario, esto es un error y no se puede hacer la encriptacion'
         }
     }
+
+
     return $resul;
 }
 const enCRIPTADO = (text) => {
     var $resul = new String();
-    let formula = ["!-", "!+", "!+-", "!++", "!++-",
+    let formula = ["!-,", "!+,", "!+-,", "!++,", "!++-,",
+        "/-,", "/+,", "/+-,", "/++,", "/++-,",
+        "#-,", "#+,", "#+-,", "#++,", "#++-,",
+        "$-,", "$+,", "$+-,", "$++,", "$++-,",
+        "%-,", "%+,", "%+-,", "%++,", "%++-,",
+        "&-,", "&+,", " "
+    ];
+    $resul = Procedimiento(text, "abcdefghijklmnñopqrstuvwxyz ", formula);
+    return $resul;
+}
+
+const Pro2 = (text, map3) => {
+    var $resul = new String();
+    var $i, $c, posicion2 = -1;
+    var $resul = new String();
+    let fila1, var2;
+    var $i, $c, $j;
+
+    let signos = ["!-", "!+", "!+-", "!++", "!++-",
         "/-", "/+", "/+-", "/++", "/++-",
         "#-", "#+", "#+-", "#++", "#++-",
         "$-", "$+", "$+-", "$++", "$++-",
         "%-", "%+", "%+-", "%++", "%++-",
         "&-", "&+", " "
     ];
-    $resul = Procedimiento(text, "abcdefghijklmnñopqrstuvwxyz ", formula);
-    return $resul;
-}
 
-const Pro2 = (text) => {
-    var $resul = new String();
-    let contador, var2, x3;
-    let matris = {
-        fila: ['a', 'b', 'c', 'd', 'e'], //FILA 1 (!) = 0
-        fila2: ['f', 'g', 'h', 'i', 'j'],
-        fila3: ['k', 'l', 'm', 'n', 'ñ'],
-        fila4: ['o', 'p', 'q', 'r', 's'],
-        fila5: ['t', 'u', 'v', 'w', 'x'],
-        fila6: ['y', 'z', '', '', ''] //FILA 2 (/)
-    };
-    var $i, $c, posicion2 = -1;
-
-
-
-    let banderaf1 = false,
-        banderaf2 = false,
-        banderaf3 = false,
-        banderaf4 = false,
-        banderaf5 = false,
-        banderaf6 = false,
-        max = -1;
-
-
-    for ($i = 0; $i < text.length; $i++) {
-        max++;
-        $c = text.charAt($i);
-
-        if (banderaf1 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila[posicion2];
-
+    var separar = text.split(","); //,"#","$","%","&","/"
+    for ($i = 0; $i < separar.length; $i++) {
+        // $resul+="posicion "+$i+":     "+ separar[$i]+"\n" ; // IMPRIMES EL VALOR
+        if (separar[$i] === '!-') {
+            $j = $i + $i - $i;
+            fila1 = "" + map3.charAt($j);
+            $resul += fila1;
+            console.log($resul);
+        }else if(separar[$i] != ''){
+            alert("UPS");
         }
-        if (banderaf2 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila2[posicion2];
-
-        }
-        if (banderaf3 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila3[posicion2];
-
-        }
-        if (banderaf4 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila4[posicion2];
-
-        }
-        if (banderaf5 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila5[posicion2];
-
-        }
-        if (banderaf6 === true && $c != "+" && $c != "-" && max <= text.length) {
-            $resul += matris.fila6[posicion2];
-
-        }
-        if ($c === ' ') {
-            banderaf1 = false;
-            banderaf2 = false;
-            banderaf3 = false;
-            banderaf4 = false;
-            banderaf5 = false;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += " ";
-        }
-        if ($c === '!') {
-            banderaf1 = true;
-            banderaf2 = false;
-            banderaf3 = false;
-            banderaf4 = false;
-            banderaf5 = false;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += "";
-        }
-        if ($c === '/') {
-            banderaf1 = false;
-            banderaf2 = true;
-            banderaf3 = false;
-            banderaf4 = false;
-            banderaf5 = false;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += "";
-        }
-        if ($c === '#') {
-            banderaf1 = false;
-            banderaf2 = false;
-            banderaf3 = true;
-            banderaf4 = false;
-            banderaf5 = false;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += "";
-        }
-        if ($c === '$') {
-            banderaf1 = false;
-            banderaf2 = false;
-            banderaf3 = false;
-            banderaf4 = true;
-            banderaf5 = false;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += "";
-        }
-        if ($c === '%') {
-            banderaf1 = false;
-            banderaf2 = false;
-            banderaf3 = false;
-            banderaf4 = false;
-            banderaf5 = true;
-            banderaf6 = false;
-
-            posicion2 = -1;
-            $resul += "";
-        }
-        if ($c === '&') {
-            banderaf1 = false;
-            banderaf2 = false;
-            banderaf3 = false;
-            banderaf4 = false;
-            banderaf5 = false;
-            banderaf6 = true;
-
-            posicion2 = -1;
-            $resul += "";
-        } else if ($c === '-') {
-            posicion2 += 1;
-        } else if ($c === '+') {
-            posicion2 += 2;
-        }
-        if (max === (text.length - 1)) {
-            // $resul += matris.fila[posicion2];
-            if (banderaf1 === true) {
-                $resul += matris.fila[posicion2];
-            } else if (banderaf2 === true) {
-                $resul += matris.fila2[posicion2];
-            } else if (banderaf3 === true) {
-                $resul += matris.fila3[posicion2];
-            } else if (banderaf4 === true) {
-                $resul += matris.fila4[posicion2];
-            } else if (banderaf5 === true) {
-                $resul += matris.fila5[posicion2];
-            } else if (banderaf6 === true) {
-                $resul += matris.fila6[posicion2];
-            }
-
-        }
-        console.log($resul);
-
+        
     }
 
-
-
     return $resul;
+
+
 }
 const desCRIPTADO = (text) => {
     var $resul = new String();
-    $resul = Pro2(text);
+    $resul = Pro2(text, "abcdefghijklmnñopqrstuvwxyz ");
     return $resul;
 }
 
